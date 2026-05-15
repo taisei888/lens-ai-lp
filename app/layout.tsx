@@ -33,6 +33,10 @@ export const metadata: Metadata = {
       "スマホアンケートとAI分析で、離職リスク・ストレス・モチベーション状態を可視化。従業員の声を経営判断に変えます。",
   },
   metadataBase: new URL("https://www.lens-ai.jp"),
+  icons: {
+    icon: "/LENS AI logo.png",
+    apple: "/LENS AI logo.png",
+  },
 };
 
 export default function RootLayout({
