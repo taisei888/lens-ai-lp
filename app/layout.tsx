@@ -33,10 +33,6 @@ export const metadata: Metadata = {
       "スマホアンケートとAI分析で、離職リスク・ストレス・モチベーション状態を可視化。従業員の声を経営判断に変えます。",
   },
   metadataBase: new URL("https://www.lens-ai.jp"),
-  icons: {
-    icon: "/lens-ai-logo.png",
-    apple: "/lens-ai-logo.png",
-  },
 };
 
 export default function RootLayout({
@@ -49,6 +45,10 @@ export default function RootLayout({
       lang="ja"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="icon" href="/lens-ai-logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/lens-ai-logo.png" />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
