@@ -34,8 +34,8 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://www.lens-ai.jp"),
   icons: {
-    icon: "/LENS AI logo.png",
-    apple: "/LENS AI logo.png",
+    icon: "/lens-ai-logo.png",
+    apple: "/lens-ai-logo.png",
   },
 };
 
