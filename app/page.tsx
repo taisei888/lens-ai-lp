@@ -1412,30 +1412,29 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
 
-            {/* 求人AI */}
-            <div className="group relative overflow-hidden rounded-[2rem] border border-indigo-100 bg-gradient-to-br from-indigo-50 via-white to-sky-50 p-8 shadow-xl shadow-indigo-100/60 transition hover:-translate-y-1 hover:shadow-2xl">
+            {/* 1on1面談記録 */}
+            <div className="group relative overflow-hidden rounded-[2rem] border border-indigo-100 bg-gradient-to-br from-indigo-50 via-white to-violet-50 p-8 shadow-xl shadow-indigo-100/60 transition hover:-translate-y-1 hover:shadow-2xl">
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-indigo-600 shadow-lg shadow-indigo-300">
                   <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="2" y="7" width="20" height="14" rx="2" />
-                    <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
-                    <line x1="12" y1="12" x2="12" y2="16" />
-                    <line x1="10" y1="14" x2="14" y2="14" />
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                   </svg>
                 </div>
                 <div>
-                  <p className="text-xs font-black uppercase tracking-widest text-indigo-500">求人AI</p>
-                  <h3 className="mt-1 text-xl font-black text-slate-950">採用文章をAIが自動生成</h3>
+                  <p className="text-xs font-black uppercase tracking-widest text-indigo-500">1on1面談記録</p>
+                  <h3 className="mt-1 text-xl font-black text-slate-950">面談をログに残して組織を動かす</h3>
                 </div>
               </div>
               <p className="mt-5 text-sm leading-7 text-slate-600">
-                募集職種・待遇・職場の雰囲気を入力するだけで、求人票・採用ページ用の文章をAIが自動作成。
-                ターゲット層に刺さるコピーを短時間で量産できます。
+                上司と部下の1on1面談内容を記録・蓄積。過去の会話履歴をもとに次回の面談をスムーズに進め、フォローの抜け漏れをゼロにします。
               </p>
               <ul className="mt-5 space-y-2">
-                {["求人票・募集要項の文章を自動生成", "職種・業種・ターゲット別に最適化", "Indeed / 求人媒体向けフォーマットに対応"].map((item) => (
+                {["面談内容をテキストで記録・保存", "過去履歴を一覧で振り返り可能", "アンケートデータと連携して課題を可視化"].map((item) => (
                   <li key={item} className="flex items-center gap-2 text-sm font-bold text-slate-700">
                     <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-[10px] font-black text-indigo-600">✓</span>
                     {item}
@@ -1444,31 +1443,58 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* 日報AI */}
+            {/* 採用KPI */}
             <div className="group relative overflow-hidden rounded-[2rem] border border-sky-100 bg-gradient-to-br from-sky-50 via-white to-indigo-50 p-8 shadow-xl shadow-sky-100/60 transition hover:-translate-y-1 hover:shadow-2xl">
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-sky-500 shadow-lg shadow-sky-300">
                   <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                    <polyline points="14 2 14 8 20 8" />
-                    <line x1="16" y1="13" x2="8" y2="13" />
-                    <line x1="16" y1="17" x2="8" y2="17" />
-                    <polyline points="10 9 9 9 8 9" />
+                    <line x1="18" y1="20" x2="18" y2="10" />
+                    <line x1="12" y1="20" x2="12" y2="4" />
+                    <line x1="6" y1="20" x2="6" y2="14" />
+                    <line x1="2" y1="20" x2="22" y2="20" />
                   </svg>
                 </div>
                 <div>
-                  <p className="text-xs font-black uppercase tracking-widest text-sky-500">日報AI</p>
-                  <h3 className="mt-1 text-xl font-black text-slate-950">日報をAIがまとめて分析</h3>
+                  <p className="text-xs font-black uppercase tracking-widest text-sky-500">採用KPI</p>
+                  <h3 className="mt-1 text-xl font-black text-slate-950">採用活動を数字で見える化</h3>
                 </div>
               </div>
               <p className="mt-5 text-sm leading-7 text-slate-600">
-                スタッフが入力した日報テキストをAIが自動要約・分析し、チーム全体の傾向やリスクサインを管理者に通知。
-                読み切れない日報も見逃しゼロに。
+                応募数・選考通過率・内定承諾率など採用ファネルをダッシュボードで一元管理。どのチャネルが効いているかを即把握できます。
               </p>
               <ul className="mt-5 space-y-2">
-                {["日報テキストをAIが自動要約", "ネガティブ発言・離職サインを自動検知", "管理者ダッシュボードで全スタッフ一覧"].map((item) => (
+                {["採用ファネルをリアルタイムで追跡", "チャネル別・職種別のKPI比較", "目標設定と進捗管理をまとめて管理"].map((item) => (
                   <li key={item} className="flex items-center gap-2 text-sm font-bold text-slate-700">
                     <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-sky-100 text-[10px] font-black text-sky-600">✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* 採用AI */}
+            <div className="group relative overflow-hidden rounded-[2rem] border border-violet-100 bg-gradient-to-br from-violet-50 via-white to-indigo-50 p-8 shadow-xl shadow-violet-100/60 transition hover:-translate-y-1 hover:shadow-2xl">
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-violet-600 shadow-lg shadow-violet-300">
+                  <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="2" y="7" width="20" height="14" rx="2" />
+                    <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                    <line x1="12" y1="12" x2="12" y2="16" />
+                    <line x1="10" y1="14" x2="14" y2="14" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs font-black uppercase tracking-widest text-violet-500">採用AI</p>
+                  <h3 className="mt-1 text-xl font-black text-slate-950">採用文章をAIが自動生成</h3>
+                </div>
+              </div>
+              <p className="mt-5 text-sm leading-7 text-slate-600">
+                募集職種・待遇・職場の雰囲気を入力するだけで、求人票・採用ページ用の文章をAIが自動作成。ターゲットに刺さるコピーを即時生成します。
+              </p>
+              <ul className="mt-5 space-y-2">
+                {["求人票・募集要項の文章を自動生成", "職種・業種・ターゲット別に最適化", "Indeed / 求人媒体向けフォーマットに対応"].map((item) => (
+                  <li key={item} className="flex items-center gap-2 text-sm font-bold text-slate-700">
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100 text-[10px] font-black text-violet-600">✓</span>
                     {item}
                   </li>
                 ))}
