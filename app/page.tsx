@@ -1096,71 +1096,74 @@ export default function Home() {
       </section>
 
       {/* ── Comparison ── */}
-      <section id="comparison" className="bg-slate-950 py-24">
-        <div className="mx-auto max-w-7xl px-5">
-          <div className="mx-auto max-w-3xl text-center mb-16">
-            <p className="text-sm font-black text-indigo-400">COMPARISON</p>
-            <h2 className="mt-3 text-3xl font-black tracking-tight text-white md:text-4xl">
+      <section id="comparison" className="bg-gradient-to-b from-slate-50 to-white py-24">
+        <div className="mx-auto max-w-5xl px-5">
+          <div className="mx-auto max-w-2xl text-center mb-14">
+            <p className="text-sm font-black tracking-widest text-indigo-500 uppercase">Comparison</p>
+            <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-900 md:text-4xl">
               他社サービスとの違い
             </h2>
-            <p className="mt-5 text-base leading-8 text-slate-400">
+            <p className="mt-4 text-base leading-8 text-slate-500">
               LENS AIは、中小企業・スタートアップのために設計されたシンプルで強力な組織診断ツールです。
             </p>
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse">
+          <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
+            <table className="w-full border-collapse bg-white">
               <thead>
-                <tr>
-                  <th className="text-left py-4 px-6 text-slate-400 font-semibold text-sm w-1/4"></th>
-                  <th className="py-4 px-6 text-center w-1/4">
+                <tr className="border-b border-slate-100">
+                  <th className="text-left py-5 px-6 text-slate-400 font-semibold text-xs uppercase tracking-wider w-1/4"></th>
+                  <th className="py-5 px-6 text-center w-1/4 bg-indigo-50">
                     <div className="inline-flex flex-col items-center gap-2">
-                      <div className="bg-indigo-600 text-white text-xs font-black px-3 py-1 rounded-full">おすすめ</div>
-                      <span className="text-white font-black text-lg">LENS AI</span>
+                      <span className="bg-indigo-600 text-white text-xs font-black px-3 py-0.5 rounded-full">おすすめ</span>
+                      <span className="text-indigo-700 font-black text-base">LENS AI</span>
                     </div>
                   </th>
-                  <th className="py-4 px-6 text-center text-slate-400 font-semibold text-base w-1/4">大手HRツール</th>
-                  <th className="py-4 px-6 text-center text-slate-400 font-semibold text-base w-1/4">従来のサーベイ</th>
+                  <th className="py-5 px-6 text-center text-slate-400 font-semibold text-sm w-1/4">大手HRツール</th>
+                  <th className="py-5 px-6 text-center text-slate-400 font-semibold text-sm w-1/4">従来のサーベイ</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  { feature: "導入の手軽さ", lens: true, others: [false, false], lensNote: "URL配布のみ", othersNote: ["複雑な設定が必要", "紙・Excel運用"] },
-                  { feature: "AI分析・改善提案", lens: true, others: [false, false], lensNote: "自動で課題を特定", othersNote: ["オプション追加料金", "なし"] },
-                  { feature: "リアルタイム集計", lens: true, others: [true, false], lensNote: "即時ダッシュボード", othersNote: ["対応", "手動集計"] },
-                  { feature: "中小企業向け料金", lens: true, others: [false, true], lensNote: "月額定額・安価", othersNote: ["高額・人数課金", "低コスト（機能限定）"] },
-                  { feature: "複数診断セット", lens: true, others: [true, false], lensNote: "コンディション＋リーダーシップ", othersNote: ["カスタム可（有料）", "単一テンプレート"] },
-                  { feature: "1on1管理連携", lens: true, others: [false, false], lensNote: "面談記録と統合", othersNote: ["別途ツール必要", "なし"] },
+                  { feature: "導入の手軽さ", lensNote: "URL配布のみ・即日利用可", othersNote: ["複雑な設定が必要", "紙・Excel運用"] },
+                  { feature: "AI分析・改善提案", lensNote: "自動で課題を特定", othersNote: ["オプション追加料金", "なし"] },
+                  { feature: "リアルタイム集計", lensNote: "即時ダッシュボード", othersOk: [true, false], othersNote: ["対応", "手動集計"] },
+                  { feature: "中小企業向け料金", lensNote: "月額定額・リーズナブル", othersOk: [false, true], othersNote: ["高額・人数課金", "低コスト（機能限定）"] },
+                  { feature: "複数診断セット", lensNote: "コンディション＋リーダーシップ", othersOk: [true, false], othersNote: ["カスタム可（有料）", "単一テンプレート"] },
+                  { feature: "1on1管理連携", lensNote: "面談記録と統合", othersNote: ["別途ツール必要", "なし"] },
                 ].map((row, i) => (
-                  <tr key={i} className={i % 2 === 0 ? "bg-slate-900" : "bg-slate-800/50"}>
-                    <td className="py-4 px-6 text-slate-300 font-semibold text-sm">{row.feature}</td>
-                    <td className="py-4 px-6 text-center">
-                      <div className="flex flex-col items-center gap-1">
-                        <span className="text-green-400 text-lg">✓</span>
-                        <span className="text-green-400 text-xs font-semibold">{row.lensNote}</span>
+                  <tr key={i} className={`border-b border-slate-50 last:border-0 ${i % 2 === 0 ? "" : "bg-slate-50/50"}`}>
+                    <td className="py-4 px-6 text-slate-700 font-semibold text-sm">{row.feature}</td>
+                    <td className="py-4 px-6 text-center bg-indigo-50/60">
+                      <div className="flex flex-col items-center gap-0.5">
+                        <span className="text-indigo-600 font-black text-base">✓</span>
+                        <span className="text-indigo-500 text-xs font-medium">{row.lensNote}</span>
                       </div>
                     </td>
-                    {row.others.map((ok, j) => (
-                      <td key={j} className="py-4 px-6 text-center">
-                        <div className="flex flex-col items-center gap-1">
-                          <span className={ok ? "text-slate-300 text-lg" : "text-slate-600 text-lg"}>
-                            {ok ? "✓" : "✕"}
-                          </span>
-                          <span className="text-slate-500 text-xs">{row.othersNote[j]}</span>
-                        </div>
-                      </td>
-                    ))}
+                    {[0, 1].map((j) => {
+                      const ok = row.othersOk ? row.othersOk[j] : false;
+                      return (
+                        <td key={j} className="py-4 px-6 text-center">
+                          <div className="flex flex-col items-center gap-0.5">
+                            <span className={`font-bold text-base ${ok ? "text-slate-400" : "text-slate-200"}`}>
+                              {ok ? "✓" : "✕"}
+                            </span>
+                            <span className="text-slate-400 text-xs">{row.othersNote[j]}</span>
+                          </div>
+                        </td>
+                      );
+                    })}
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
 
-          <div className="mt-12 text-center">
-            <p className="text-slate-400 text-sm mb-6">LENS AIなら、難しい設定なしに今日から組織診断を始められます。</p>
+          <div className="mt-10 text-center">
+            <p className="text-slate-500 text-sm mb-5">LENS AIなら、難しい設定なしに今日から組織診断を始められます。</p>
             <a
               href="#cta"
-              className="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-black px-8 py-3 rounded-xl text-base transition-colors"
+              className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-black px-8 py-3 rounded-xl text-sm transition-colors shadow-md shadow-indigo-100"
             >
               無料で試してみる
             </a>
