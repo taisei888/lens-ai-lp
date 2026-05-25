@@ -1095,6 +1095,79 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Comparison ── */}
+      <section id="comparison" className="bg-slate-950 py-24">
+        <div className="mx-auto max-w-7xl px-5">
+          <div className="mx-auto max-w-3xl text-center mb-16">
+            <p className="text-sm font-black text-indigo-400">COMPARISON</p>
+            <h2 className="mt-3 text-3xl font-black tracking-tight text-white md:text-4xl">
+              他社サービスとの違い
+            </h2>
+            <p className="mt-5 text-base leading-8 text-slate-400">
+              LENS AIは、中小企業・スタートアップのために設計されたシンプルで強力な組織診断ツールです。
+            </p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr>
+                  <th className="text-left py-4 px-6 text-slate-400 font-semibold text-sm w-1/4"></th>
+                  <th className="py-4 px-6 text-center w-1/4">
+                    <div className="inline-flex flex-col items-center gap-2">
+                      <div className="bg-indigo-600 text-white text-xs font-black px-3 py-1 rounded-full">おすすめ</div>
+                      <span className="text-white font-black text-lg">LENS AI</span>
+                    </div>
+                  </th>
+                  <th className="py-4 px-6 text-center text-slate-400 font-semibold text-base w-1/4">大手HRツール</th>
+                  <th className="py-4 px-6 text-center text-slate-400 font-semibold text-base w-1/4">従来のサーベイ</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { feature: "導入の手軽さ", lens: true, others: [false, false], lensNote: "URL配布のみ", othersNote: ["複雑な設定が必要", "紙・Excel運用"] },
+                  { feature: "AI分析・改善提案", lens: true, others: [false, false], lensNote: "自動で課題を特定", othersNote: ["オプション追加料金", "なし"] },
+                  { feature: "リアルタイム集計", lens: true, others: [true, false], lensNote: "即時ダッシュボード", othersNote: ["対応", "手動集計"] },
+                  { feature: "中小企業向け料金", lens: true, others: [false, true], lensNote: "月額定額・安価", othersNote: ["高額・人数課金", "低コスト（機能限定）"] },
+                  { feature: "複数診断セット", lens: true, others: [true, false], lensNote: "コンディション＋リーダーシップ", othersNote: ["カスタム可（有料）", "単一テンプレート"] },
+                  { feature: "1on1管理連携", lens: true, others: [false, false], lensNote: "面談記録と統合", othersNote: ["別途ツール必要", "なし"] },
+                ].map((row, i) => (
+                  <tr key={i} className={i % 2 === 0 ? "bg-slate-900" : "bg-slate-800/50"}>
+                    <td className="py-4 px-6 text-slate-300 font-semibold text-sm">{row.feature}</td>
+                    <td className="py-4 px-6 text-center">
+                      <div className="flex flex-col items-center gap-1">
+                        <span className="text-green-400 text-lg">✓</span>
+                        <span className="text-green-400 text-xs font-semibold">{row.lensNote}</span>
+                      </div>
+                    </td>
+                    {row.others.map((ok, j) => (
+                      <td key={j} className="py-4 px-6 text-center">
+                        <div className="flex flex-col items-center gap-1">
+                          <span className={ok ? "text-slate-300 text-lg" : "text-slate-600 text-lg"}>
+                            {ok ? "✓" : "✕"}
+                          </span>
+                          <span className="text-slate-500 text-xs">{row.othersNote[j]}</span>
+                        </div>
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-slate-400 text-sm mb-6">LENS AIなら、難しい設定なしに今日から組織診断を始められます。</p>
+            <a
+              href="#cta"
+              className="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-black px-8 py-3 rounded-xl text-base transition-colors"
+            >
+              無料で試してみる
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ── Flow ── */}
       <section id="flow" className="bg-white py-20">
         <div className="mx-auto max-w-7xl px-5">
