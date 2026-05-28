@@ -72,8 +72,8 @@ export default function ContactPage() {
               <div className="mt-4 space-y-2 text-sm font-bold text-slate-700">
                 <p>
                   <span className="text-slate-400">Mail：</span>
-                  <a href="mailto:info@lends-ai.com" className="text-indigo-600 hover:underline">
-                    info@lends-ai.com
+                  <a href="mailto:ito.t@80grp.com" className="text-indigo-600 hover:underline">
+                    ito.t@80grp.com
                   </a>
                 </p>
                 <p>

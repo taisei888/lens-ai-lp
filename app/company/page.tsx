@@ -13,7 +13,7 @@ const companyInfo = [
   { label: "資本金",         value: "501万円" },
   { label: "プロジェクト責任者", value: "伊藤 大世" },
   { label: "電話番号",       value: "050-8896-5889" },
-  { label: "メールアドレス", value: "info@lends-ai.com" },
+  { label: "メールアドレス", value: "ito.t@80grp.com" },
   { label: "事業内容",       value: "組織コンディション分析サービス「LENDS AI」の開発・運営" },
 ];
 
