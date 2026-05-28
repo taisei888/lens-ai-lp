@@ -75,10 +75,24 @@ export default function ContactForm() {
       return;
     }
     setLoading(true);
-    // TODO: ここにメール送信処理を実装（Resend / SendGrid 等）
-    await new Promise((resolve) => setTimeout(resolve, 800));
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        company: form.companyName,
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        employees: form.department,
+        message: form.message,
+      }),
+    });
     setLoading(false);
-    setSubmitted(true);
+    if (res.ok) {
+      setSubmitted(true);
+    } else {
+      alert("送信に失敗しました。しばらくしてから再度お試しください。");
+    }
   }
 
   if (submitted) {
