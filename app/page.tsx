@@ -348,7 +348,7 @@ export default function Home() {
             <img
               src="/LENS AI logo.png"
               alt="LENDS AI logo"
-              className="h-8 w-auto object-contain"
+              style={{ height: 36, width: "auto", maxWidth: 160, objectFit: "contain" }}
             />
           </div>
 
